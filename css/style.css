@@ -13,7 +13,7 @@
 
   --border-radius: .5rem;
   --padding: 2.55rem;
-  --margin: 2rem;
+  --margin: 1.5rem;
 }
 
 *,
@@ -38,7 +38,7 @@ body{
 }
 
 .main-container{
-  max-width: 1440px;
+  max-width: 1200px;
   margin: 0 auto;
   min-height: 100%;
   padding: calc(var(--padding) * 1.5) var(--padding);
@@ -116,8 +116,8 @@ body{
     }
 
   .card-body .card-title{
-    font-size: 1.8rem;
-    line-height: 2.3rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
     margin-bottom: var(--margin);
     font-weight: 600;
   }
@@ -190,7 +190,7 @@ body{
   }
 
   .card.card.overlay{
-    background-position-x: 85%;
+    background-position-x: 90%;
   }
 }
 
@@ -203,5 +203,9 @@ body{
         grid-template-areas: 
       "g-1 g-1 g-2 g-3"
       "g-4 g-5 g-5 g-3";
+  }
+
+  .card.card.overlay{
+    background-position-x: 78%;
   }
 }

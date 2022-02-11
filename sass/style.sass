@@ -9,7 +9,6 @@
 
   --font-family: 'Barlow Semi Condensed', sans-serif
   --font-size: 13px
-  --line-height: 22px
 
   --border-radius: .5rem
   --padding: 2.55rem
@@ -43,12 +42,13 @@ body
 .card
   &-grid
     display: grid
-    gap: 2.5rem
-    padding-top: var(--padding)
-    padding-bottom: var(--padding)
+    grid-column-gap: 2.5rem
+    grid-row-gap: 2rem
+    padding-top: 0
+    padding-bottom: 8.9rem
 
   border-radius: var(--border-radius)
-  padding: var(--padding) var(--padding) calc(var(--padding) * 1.3)
+  padding: 2rem 2.5rem
   position: relative
   z-index: 0
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px
@@ -58,20 +58,25 @@ body
     background-repeat: no-repeat
     background-position-x: 80%
     background-position-y: 0
-    background-size: 10rem
+    background-size: 8rem
   
   &-header
     display: flex
     gap: 1.5rem
     align-items: center
-    padding-bottom: .5rem
-    margin-bottom: 1rem
+    padding-bottom: 0
+    margin-bottom: 0
+
+  &-body
+    padding-top: 1.3em
   
   &-avatar
-    width: 40px
-    height: 40px
+    width: 32px
+    height: 32px
     border-radius: 50%
     border: 2px solid var(--white)
+    margin-left: -.3rem
+    margin-top: -.2rem
 
     &.online
       border-color: var(--light-violet)
@@ -86,12 +91,13 @@ body
 
   &-title
     font-size: 1.5rem
-    line-height: 2rem
-    margin-bottom: var(--margin)
+    line-height: 1.25
+    margin-bottom: 1rem
     font-weight: 600
   
   &-description
     opacity: .7
+    line-height: 1.44
   
   &-white
     background-color: var(--white)
@@ -116,7 +122,8 @@ body
 
 @media screen and (min-width: 998px) 
   .main-container
-    padding: 0 var(--padding)
+    padding: 12.5rem 3.5rem
+    margin-top: 0
 
   .card
     &-grid
@@ -141,11 +148,11 @@ body
           grid-area: g-5
 
     &.overlay
-      background-position-x: 85%
+      background-position-x: 82%
 
 @media screen and (min-width: 1200px) 
   .card-grid
     grid-template-columns: repeat(4, 1fr)
-    grid-template-rows: repeat(2, 1fr)
+    /*grid-template-rows: repeat(2, 1fr)*/
     grid-template-areas: "g-1 g-1 g-2 g-3" "g-4 g-5 g-5 g-3"
   

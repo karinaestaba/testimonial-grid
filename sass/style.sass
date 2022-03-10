@@ -23,13 +23,19 @@
 
 html,
 body
-  height: 100%
   min-height: 100vh
   font-size: var(--font-size)
   font-family: var(--font-family)
   line-height: var(--line-height)
   font-weight: 500
   background-color: var(--light-grayish)
+
+body
+  height: 100%
+  display: grid
+  grid-template-rows: 1fr auto
+  grid-template-areas: "c-main" "c-footer"
+  justify-content: center
 
 .main-container
   max-width: 1200px
@@ -38,6 +44,7 @@ body
   padding: calc(var(--padding) * 1.5) var(--padding)
   display: flex
   align-items: center
+  grid-area: c-,aom
 
 .card
   &-grid
@@ -45,7 +52,6 @@ body
     grid-column-gap: 2.5rem
     grid-row-gap: 2rem
     padding-top: 0
-    padding-bottom: 8.9rem
 
   border-radius: var(--border-radius)
   padding: 2rem 2.5rem
@@ -114,6 +120,25 @@ body
   &-dark
     background-color: var(--dark-blackish)
     color: var(--white)
+
+.main-footer
+  grid-area: foot
+  min-height: 65px
+  color: var(--dark-grayish)
+  text-align: center
+  font-size: 12px
+  line-height: 1.1
+  display: flex
+  justify-content: center
+  align-content: center
+  align-items: center
+  grid-area: c-footer
+
+  a
+    display: inline-block
+    margin-left: 2px
+    color: var(--moderate-violet)
+    text-decoration: none
 
 @media screen and (min-width: 375px) 
   .card
